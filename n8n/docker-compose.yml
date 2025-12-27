@@ -1,0 +1,16 @@
+# named volume 'n8n_data' is marked as "external" (used by service 'n8n'), so either remove "external" from volume definition or it needs to be created using: docker volume create n8n_data
+name: n8n-server
+services:
+    n8n:
+        stdin_open: true
+        tty: true
+        container_name: n8n
+        ports:
+            - 5678:5678
+        volumes:
+            - n8n_data:/home/node/.n8n
+        image: n8nio/n8n:latest
+volumes:
+    n8n_data:
+        external: true
+        name: n8n_data
