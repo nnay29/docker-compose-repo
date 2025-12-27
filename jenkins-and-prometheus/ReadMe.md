@@ -6,6 +6,8 @@ The jenkins service particularly enables DinD (Docker in Docker) which will enab
 
 1. Copy the both yml files in a directory of your computer
 2. Navigate to the directory containing the docker-compose.yml and prometheus.yml files.
-3. Run docker-compose up -d
-4. Open _localhost:8185_ to install plugins and configure Jenkins [How to unlock and configure Jenkins](https://www.youtube.com/watch?v=Zdxko2bPAAw&t=343s). 
-5. Open _localhost:9090_ to access Prometheus.
+3. Run `docker-compose up -d`
+4. Open _`localhost:8185`_ to install plugins and configure Jenkins [How to unlock and configure Jenkins](https://www.youtube.com/watch?v=Zdxko2bPAAw&t=343s). 
+5. Open _`localhost:9090`_ to access Prometheus.
+6. Services will _always_ be up
+6. To stop the stack run `docker compose down`
